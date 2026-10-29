@@ -1,41 +1,13 @@
-# FLIP / TIME — 使用指南
+# FLIP / TIME — V32 Journal Edit Test
 
-**推荐使用流程**
+V32 adds direct journal opening for activities that already have a journal note.
 
-设置倒计时 → 开始 / 暂停 → 完成每日打卡 → 进入时间网格 → 划选并记录活动
+- Tap a saved colored activity **with a note**: opens its journal immediately, with focus in the note textarea.
+- Tap a saved activity **without a note**: opens the existing color editing screen.
+- In journal view, tap the outlined **pencil** button to return to Select color. Any edited note text remains in the editor state, including while selecting a new color.
+- Choose a color, continue to activity title, optionally return to the journal, then use the check button to save all fields together.
+- Export Backup includes activity `note` fields in the `ft-records` data, unchanged from V31.
 
-## 01 — 倒计时 / Countdown
+**Important:** Closing the modal without pressing the check button discards unsaved changes. For production iOS/Android verification, test the keyboard and export/import backup on a real device before uploading to the live GitHub Pages site.
 
-首页上方为倒计时，显示小时、分钟及秒数。
-
-1. **设置时间**：点击左一圆形图标按钮，通过上下滚轮选择小时和分钟。
-2. **Start**：开始倒计时。
-3. **Pause / Resume**：暂停或继续。
-4. **Reset**：重置倒计时。
-
-**完成条件**：只有倒计时归零后，当天才会自动标记为已完成，月度热力日历中的对应方格随之点亮。
-
-## 02 — 每日打卡 / Daily Calendar
-
-首页下方为月度热力日历。
-
-- **亮白色方格**：当天已完成倒计时。
-- **暗灰色方格**：当天尚未完成。
-- **白色外框**：标识今天。
-
-点击任意日期，即可进入当天的时间记录界面。
-
-## 03 — 时间记录 / Daily Timeline
-
-每日时间表采用 **24 行 × 8 列**的方格布局。
-
-1. **选择时间**：点击单格或滑动框选多个方格，支持多次划选。
-2. **确认区域**：点击右上角 **→**。
-3. **选择颜色**：从色卡中选色，点击 **→**。
-4. **输入内容**：填写活动名称，点击 **✓** 保存。
-
-保存后，同一活动的方格自动合并成连续色块。点击已有色块，可修改或删除记录。
-
-## 本地保存与恢复 / Local Backup
-
-每次记录或设置发生变化后，应用会写入本机 `localStorage` 并排队更新 IndexedDB 快照。点击首页 **···** 可查看和检查快照，或执行 **Export Backup / Restore Backup**。这两种本地存储都可能在卸载应用、清除浏览器数据等情况下丢失；请定期导出 JSON 到手机「文件」或其他独立位置。无联网同步功能。
+To deploy, replace the existing `index.html` and `sw.js` in your GitHub Pages repository. Other files have not changed.
