@@ -1,0 +1,1 @@
+FLIP / TIME PWA - Upload index.html, manifest.webmanifest, sw.js, .nojekyll and the icons folder to the ROOT of a GitHub Pages repository. The Android APK project should NOT be uploaded. User data stays in device/browser storage and does not automatically sync or back up.
