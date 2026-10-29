@@ -1,5 +1,3 @@
-在原版 README 基础上新增 00 — 初次安装 / Installation，其余内容和编号保持不变。以下可直接复制到 GitHub 的 `README.md`。
-
 # FLIP / TIME — 使用指南
 
 **推荐使用流程**
