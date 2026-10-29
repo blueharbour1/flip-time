@@ -1,13 +1,77 @@
-# FLIP / TIME — V32 Journal Edit Test
+在原版 README 基础上新增 00 — 初次安装 / Installation，其余内容和编号保持不变。以下可直接复制到 GitHub 的 `README.md`。
 
-V32 adds direct journal opening for activities that already have a journal note.
+# FLIP / TIME — 使用指南
 
-- Tap a saved colored activity **with a note**: opens its journal immediately, with focus in the note textarea.
-- Tap a saved activity **without a note**: opens the existing color editing screen.
-- In journal view, tap the outlined **pencil** button to return to Select color. Any edited note text remains in the editor state, including while selecting a new color.
-- Choose a color, continue to activity title, optionally return to the journal, then use the check button to save all fields together.
-- Export Backup includes activity `note` fields in the `ft-records` data, unchanged from V31.
+**推荐使用流程**
 
-**Important:** Closing the modal without pressing the check button discards unsaved changes. For production iOS/Android verification, test the keyboard and export/import backup on a real device before uploading to the live GitHub Pages site.
+安装应用 → 设置倒计时 → 开始 / 暂停 → 完成每日打卡 → 进入时间网格 → 划选并记录活动 → 添加随记（可选）
 
-To deploy, replace the existing `index.html` and `sw.js` in your GitHub Pages repository. Other files have not changed.
+---
+
+## 00 — 初次安装 / Installation
+
+**应用地址：** [https://blueharbour1.github.io/flip-time/](https://blueharbour1.github.io/flip-time/)
+
+**iOS / iPhone**
+
+1. 使用 **Safari** 打开上述网址。
+2. 点击浏览器的 **分享按钮**，选择 **添加到主屏幕（Add to Home Screen）**。
+3. 点击 **添加（Add）**，即可从手机主屏幕打开应用。
+
+**Android**
+
+1. 使用 **Chrome** 打开上述网址。
+2. 点击右上角 **⋮**，选择 **安装应用（Install app）** 或 **添加到主屏幕（Add to Home screen）**。
+3. 确认安装，即可从手机主屏幕打开应用。
+
+安装后可像普通 App 一样使用，首次加载完成后支持离线记录。
+
+---
+
+## 01 — 倒计时 / Countdown
+
+首页上方为倒计时，显示小时、分钟及秒数。
+
+1. **设置时间**：点击左一圆形图标按钮，通过上下滚轮选择小时和分钟。
+2. **Start**：开始倒计时。
+3. **Pause / Resume**：暂停或继续。
+4. **Reset**：重置倒计时。
+
+**完成条件**：只有倒计时归零后，当天才会自动标记为已完成，月度热力日历中的对应方格随之点亮。
+
+---
+
+## 02 — 每日打卡 / Daily Calendar
+
+首页下方为月度热力日历。
+
+- **亮白色方格**：当天已完成倒计时。
+- **暗灰色方格**：当天尚未完成。
+- **白色外框**：标识今天。
+
+点击任意日期，进入当天的时间记录界面。日期下方显示倒计时状态：
+
+- **已完成**：✓ 04:00（完成时长）
+- **未完成**：00:38 / 04:00（剩余时间 / 目标时长）
+
+---
+
+## 03 — 时间记录 / Daily Timeline
+
+每日时间表采用 **24 行 × 8 列**的方格布局。
+
+1. **选择时间**：点击单格或滑动框选多个方格，支持多次划选。
+2. **确认区域**：点击右上角 **→**。
+3. **选择颜色**：从色卡中选色，点击 **→**。
+4. **输入内容**：填写活动名称，点击 **✓** 保存。
+
+**活动随记 / Journal**
+
+- 点击活动编辑界面的**随记图标**，进入随记页面。
+- 在 `What are you thinking now?` 文本框中记录想法，点击 **✓** 保存。
+- 有随记的色块会显示小图标，随记正文不直接显示在时间网格中。
+- 点击已有随记的色块，直接查看或修改随记；点击**铅笔图标**可返回选色编辑界面。
+
+保存后，同一活动的方格自动合并成连续色块。没有随记的活动可直接点击修改或删除。
+
+**数据保存**：所有活动、随记与打卡状态自动保存在本机。可通过首页 **···** 菜单检查保存状态、导出或恢复 JSON 备份。卸载应用或清除网站数据前，请先导出备份。
